@@ -6,15 +6,16 @@ public class Cat {
     private String furColor;
     private int age;
 
-    private boolean isFemale;
     private int counter;
 
-    public Cat(String name, String furColor, int age, boolean isFemale) {
+    
+    public Cat(String name, String furColor, int age) {
         this.name = name;
         this.furColor = furColor;
         this.age = age;
-        this.isFemale = isFemale;
     }
+
+
 
     public String getStringAttributes(String flag) {
         switch (flag) {
@@ -28,17 +29,7 @@ public class Cat {
     }
 
     public String getAge() {
-        return checkCompliance();
-    }
-
-    private String checkCompliance() {
-        if (isFemale) {
-            // nicht OK!
-            return checkEscalationLevel();
-         } else {
-            // OK! 
-            return Integer.toString(age);
-         }
+        return checkEscalationLevel();
     }
 
     private String checkEscalationLevel() {
